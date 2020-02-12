@@ -8,4 +8,5 @@ git reset --soft ...
 git restore
 git branch
 git checkout dev
+git merge dev
 EOF
