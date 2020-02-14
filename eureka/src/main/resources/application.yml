@@ -1,18 +1,38 @@
+#启动eureka集群时，需要正确配置域名，defaultZone也要使用域名（如果时本地启动需要修改host文件），
+#否则eureka界面General Info下的available-replicas显示不正确
 spring:
   application:
     name: eureka
   security:
     user:
-      name: muyun
-      password: muyun
-
-server:
-  port: 8761
-
+      name: root
+      password: root
 eureka:
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    service-url:
+      defaultZone: http://root:root@eureka1:8761/eureka/,http://root:root@eureka2:8762/eureka/,http://root:root@eureka3:8763/eureka/
 
-
-
+---
+spring:
+  profiles: eureka1
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: eureka1
+---
+spring:
+  profiles: eureka2
+server:
+  port: 8762
+eureka:
+  instance:
+    hostname: eureka2
+---
+spring:
+  profiles: eureka3
+server:
+  port: 8763
+eureka:
+  instance:
+    hostname: eureka3
