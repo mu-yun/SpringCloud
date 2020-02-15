@@ -2,10 +2,28 @@ spring:
   application:
     name: product
 
-server:
-  port: 8082
-
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://root:root@eureka1:8761/eureka/,http://root:root@eureka2:8762/eureka/,http://root:root@eureka3:8763/eureka/
+
+---
+spring:
+  profiles: product1
+
+server:
+  port: 8091
+
+---
+spring:
+  profiles: product2
+
+server:
+  port: 8092
+
+---
+spring:
+  profiles: product3
+
+server:
+  port: 8093

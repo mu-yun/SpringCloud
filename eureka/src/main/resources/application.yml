@@ -7,6 +7,7 @@ spring:
     user:
       name: root
       password: root
+
 eureka:
   client:
     service-url:
@@ -15,24 +16,30 @@ eureka:
 ---
 spring:
   profiles: eureka1
+
 server:
   port: 8761
+
 eureka:
   instance:
     hostname: eureka1
 ---
 spring:
   profiles: eureka2
+
 server:
   port: 8762
+
 eureka:
   instance:
     hostname: eureka2
 ---
 spring:
   profiles: eureka3
+
 server:
   port: 8763
+
 eureka:
   instance:
     hostname: eureka3
