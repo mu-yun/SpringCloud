@@ -20,3 +20,5 @@ feign:
     config:
       default:
         loggerLevel: basic
+  hystrix:
+    enabled: true
