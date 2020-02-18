@@ -8,5 +8,6 @@ git reset --soft ...
 git restore
 git branch
 git checkout dev
+git branch --set-upstream-to=origin/dev dev
 git merge dev
 EOF

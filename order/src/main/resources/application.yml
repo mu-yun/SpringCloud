@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: order
+
+server:
+  port: 8100
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:root@eureka1:8761/eureka/,http://root:root@eureka2:8762/eureka/,http://root:root@eureka3:8763/eureka/
+
+#Feign logging only responds to the DEBUG level.
+logging:
+  level:
+    com.muyun.order.client.ProductClient: debug
+#loggerLevel default is none
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: basic
