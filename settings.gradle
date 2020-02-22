@@ -5,6 +5,7 @@ include 'user'
 include 'product'
 include 'order'
 include 'hystrix-dashboard'
+inclede 'turbine'
 
 //rootProject.children.each {project ->
 //    project.buildFileName = "${project.name}.gradle"
