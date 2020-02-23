@@ -20,3 +20,13 @@ feign:
     config:
       default:
         loggerLevel: basic
+#if enabled is true,hystrix dashboard will display feign client method
+#  hystrix:
+#    enabled: true
+
+#enable connect to hystrix dashboard
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
