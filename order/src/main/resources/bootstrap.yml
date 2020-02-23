@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: order
+  #default uri is 'http://localhost:8888'
+  cloud:
+    config:
+      uri: http://root:root@localhost:8888
+
+  profiles:
+    active: dev
+
+server:
+  port: 8100
+
