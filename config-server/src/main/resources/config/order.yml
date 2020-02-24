@@ -1,0 +1,21 @@
+#Feign logging only responds to the DEBUG level.
+logging:
+  level:
+    com.muyun.order.client.ProductClient: debug
+#loggerLevel default is none
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: basic
+#if enabled is true,hystrix dashboard will display feign client method
+#  hystrix:
+#    enabled: true
+
+#enable connect to hystrix dashboard
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+

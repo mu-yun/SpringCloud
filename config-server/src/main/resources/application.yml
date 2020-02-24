@@ -2,9 +2,14 @@ spring:
   application:
     name: config-server
 
-#active profile must be native
+  #active profile must be native,because classpath:/config is be used
   profiles:
     active: native
+  #  cloud:
+  #    config:
+  #      server:
+  #        native:
+  #          searchLocations:
 
   security:
     user:
@@ -13,3 +18,9 @@ spring:
 
 server:
   port: 8888
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:root@eureka1:8761/eureka/,http://root:root@eureka2:8762/eureka/,http://root:root@eureka3:8763/eureka/
+

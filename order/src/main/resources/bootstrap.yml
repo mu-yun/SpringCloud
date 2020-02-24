@@ -1,14 +1,20 @@
 spring:
   application:
     name: order
-  #default uri is 'http://localhost:8888'
   cloud:
     config:
-      uri: http://root:root@localhost:8888
-
-  profiles:
-    active: dev
+      username: root
+      password: root
+      discovery:
+        enabled: true
+        service-id: config-server
 
 server:
   port: 8100
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:root@eureka1:8761/eureka/,http://root:root@eureka2:8762/eureka/,http://root:root@eureka3:8763/eureka/
+
 
