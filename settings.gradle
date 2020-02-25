@@ -8,6 +8,7 @@ include 'hystrix-dashboard'
 include 'turbine'
 include 'config-server'
 include 'zuul'
+include 'gateway'
 
 //rootProject.children.each {project ->
 //    project.buildFileName = "${project.name}.gradle"
