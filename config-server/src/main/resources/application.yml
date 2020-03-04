@@ -3,18 +3,23 @@ spring:
     name: config-server
 
   #active profile must be native,because classpath:/config is be used
-  profiles:
-    active: native
-  #  cloud:
-  #    config:
-  #      server:
-  #        native:
-  #          searchLocations:
-
+  #  profiles:
+  #    active: native
+  #    cloud:
+  #      config:
+  #        server:
+  #          native:
+  #            searchLocations:
   security:
     user:
       name: root
       password: root
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/mu-yun/spring-cloud.git
+          search-paths: config/
 
 server:
   port: 8888
