@@ -17,9 +17,4 @@ feign:
 #  hystrix:
 #    enabled: true
 
-#enable connect to hystrix dashboard
-management:
-  endpoints:
-    web:
-      exposure:
-        include: hystrix.stream
+test-config: local
