@@ -20,6 +20,9 @@ spring:
         git:
           uri: https://github.com/mu-yun/spring-cloud.git
           search-paths: config/
+    bus:
+      trace:
+        enabled: true
 
 server:
   port: 8888
@@ -29,3 +32,8 @@ eureka:
     service-url:
       defaultZone: http://root:root@eureka1:8761/eureka/,http://root:root@eureka2:8762/eureka/,http://root:root@eureka3:8763/eureka/
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh,bus-env
