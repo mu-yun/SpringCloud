@@ -1,13 +1,13 @@
 # SpringCloud
 SpringCloud Demo
 
-#Environment
-zookeeper
-kafka
+# Environment
++ zookeeper
++ kafka
 
-#Step
+# Step
 
-##spring-cloud-bus
+## spring-cloud-bus
 1. configure `zookeeper` and `kafka`.
 2. config server and config client add `spring-cloud-starter-bus-kafka` dependency.
 3. config server exposes the `/actuator/bus-refresh` endpoint. 
