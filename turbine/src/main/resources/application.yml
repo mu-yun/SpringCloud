@@ -9,5 +9,6 @@ eureka:
       defaultZone: http://root:root@eureka1:8761/eureka/,http://root:root@eureka2:8762/eureka/,http://root:root@eureka3:8763/eureka/
 
 turbine:
-  app-config: order
-  clusterNameExpression: new String("default")
+  app-config: order,product
+  aggregator:
+    cluster-config: ORDER,PRODUCT
