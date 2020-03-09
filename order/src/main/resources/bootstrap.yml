@@ -18,9 +18,3 @@ eureka:
       defaultZone: http://root:root@eureka1:8761/eureka/,http://root:root@eureka2:8762/eureka/,http://root:root@eureka3:8763/eureka/
 
 
-#enable connect to hystrix dashboard and refresh config
-management:
-  endpoints:
-    web:
-      exposure:
-        include: hystrix.stream
