@@ -17,7 +17,7 @@ feign:
 #  hystrix:
 #    enabled: true
 
-#enable connect to hystrix dashboard and refresh config
+#enable connect to hystrix dashboard
 management:
   endpoints:
     web:

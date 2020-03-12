@@ -1,10 +1,10 @@
-package com.muyun.turbine;
+package com.muyun.hystrixturbine;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TurbineApplicationTests {
+class HystrixDashboardApplicationTests {
 
     @Test
     void contextLoads() {
