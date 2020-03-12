@@ -11,12 +11,12 @@
 
    ```yml
    spring:
-   	cloud:
-   		config:
-   			server:
-   				git:
-   					uri: https://github.com/***/spring-cloud-config.git
-   					search-paths: config/
+     cloud:
+       config:
+         server:
+           git:
+             uri: https://github.com/mu-yun/spring-cloud.git
+             search-paths: config/
    ```
 
 #### Securing The Eureka Server
