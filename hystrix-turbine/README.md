@@ -20,18 +20,19 @@
 # Turbine
 ### Step
 1. add `spring-cloud-starter-netflix-turbine` dependency
+
 2. add the configuration of `EurekaClient` (don't need to add dependency)
+
 3. add `@EnableTurbine` annotation
+
 4. configure properties
 
-```yml
-turbine:
-	#application name
-  app-config: order,product
-  #eureka application name
-  aggregator:
-    cluster-config: ORDER,PRODUCT 
-```
-
-   
+   ```yml
+   turbine:
+     #application name
+     app-config: order,product
+     #eureka application name
+     aggregator:
+       cluster-config: ORDER,PRODUCT
+   ```
 

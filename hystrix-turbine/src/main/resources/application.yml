@@ -11,6 +11,8 @@ eureka:
       defaultZone: http://root:root@eureka1:8761/eureka/,http://root:root@eureka2:8762/eureka/,http://root:root@eureka3:8763/eureka/
 
 turbine:
+  #application name
   app-config: order,product
+  #eureka application name
   aggregator:
     cluster-config: ORDER,PRODUCT
