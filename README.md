@@ -1,5 +1,5 @@
-# SpringCloud
-SpringCloud Demo
+# Spring Cloud
+Spring Cloud Demo
 
 # Environment
 
